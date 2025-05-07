@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  font-family: "Inter Tight", sans-serif;
+  background-image: url('../img/wallpaperflare.com_wallpaper (8).jpg');
+  background-position: center;
+  background-size: cover;
+}

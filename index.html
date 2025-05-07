@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Todo List</title>
+    <link rel="shortcut icon" href="src/img/7692809.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/all.min.css">
+    <link rel="stylesheet" href="src/css/output.css">
+</head>
+<body>
+    <main>
+        <div class="container mx-auto">
+            <section  class="py-10">
+                <h1 class="text-center text-5xl font-bold text-red-700">Todo List</h1>
+            </section>
+    
+            <section class="py-10 flex flex-col items-start justify-center gap-5 text-center">
+                <span class="text-red-700 text-lg font-semibold">Create your tasks</span>
+                
+                <div class="w-full max-w-sm min-w-[200px] flex gap-2 items-center">
+                    <input id="taskInput"
+                        class="flex-1 bg-transparent placeholder:text-red-400 text-red-700 text-sm border border-red-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-red-500 hover:border-red-300 shadow-sm focus:shadow"
+                        placeholder="Type here..." />
+                    <button type="button" onclick="addTask()"
+                        class="shrink-0 whitespace-nowrap text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        Add Task
+                    </button>
+                </div>
+
+
+                <div id="alert" class=" hidden text-red-600 mb-2">
+                    <div class="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                        </svg>
+                        <span class="sr-only">Info</span>
+                        <div>
+                          <span class="font-medium">Danger alert!</span> <br> <br> The text is empty!. You must add a task.
+                        </div>
+                      </div>
+                </div>
+
+            </section>
+    
+                <section class="py-10 md:w-1/2 mx-auto">
+                    <ul id="taskList" class="text-red-700 bg-white shadow-md rounded-lg p-6 space-y-2">
+
+                    </ul>
+                </section>
+        </div>
+    </main>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
